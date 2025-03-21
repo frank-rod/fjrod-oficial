@@ -20,4 +20,4 @@ export const scrollToElement = (elementId: string, event?: React.MouseEvent) => 
       behavior: "smooth"
     });
   }
-};
+}; 
