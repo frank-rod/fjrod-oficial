@@ -24,18 +24,19 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.0.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^0.1.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "file-loader": "^6.2.0",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5"
   }
 }
