@@ -1,23 +1,43 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { PreloadImages } from "@/components/preload-images";
 
-const inter = Inter({ subsets: ['latin'] });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: 'Frank Rodriguez - Portfolio',
-  description: 'Portfolio personal de Frank Rodriguez',
+  title: "Francisco J. Rodriguez | Financial & Data Specialist",
+  description: "Portfolio personal de Francisco J. Rodriguez, Financial & Data Specialist con experiencia en Python, Excel, SQL y herramientas de IA.",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="es" className="scroll-smooth">
-      <body className={inter.className}>
-        <main>{children}</main>
+    <html lang="es" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <PreloadImages />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
