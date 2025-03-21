@@ -34,11 +34,6 @@ const nextConfig = {
     });
 
     return config;
-  },
-  
-  // Configuración para PostCSS
-  experimental: {
-    appDir: true
   }
 };
 
