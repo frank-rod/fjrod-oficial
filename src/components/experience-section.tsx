@@ -11,8 +11,8 @@ export function ExperienceSection() {
         <div className="border-l-2 border-primary pl-6">
           <div className="flex flex-col space-y-2">
             <div className="flex items-center gap-x-2">
-              <h3 className="text-xl font-bold">Business Intelligence Manager</h3>
-              <div className="ml-auto text-sm text-muted-foreground">Ene 2025 - Presente</div>
+              <h3 className="text-xl font-bold">Data Analyst Sr</h3>
+              <div className="ml-auto text-sm text-muted-foreground">2025</div>
             </div>
             <p className="text-base font-medium">Manuable - Monterrey, NL, México</p>
             <ul className="list-disc list-outside ml-5 text-muted-foreground">
@@ -28,8 +28,8 @@ export function ExperienceSection() {
         <div className="border-l-2 border-primary pl-6">
           <div className="flex flex-col space-y-2">
             <div className="flex items-center gap-x-2">
-              <h3 className="text-xl font-bold">Data Analyst Sr</h3>
-              <div className="ml-auto text-sm text-muted-foreground">Nov 2024 - Ene 2025</div>
+              <h3 className="text-xl font-bold">Data Analyst Jr</h3>
+              <div className="ml-auto text-sm text-muted-foreground">2024</div>
             </div>
             <p className="text-base font-medium">Manuable - Monterrey, NL, México</p>
             <ul className="list-disc list-outside ml-5 text-muted-foreground">
@@ -48,7 +48,7 @@ export function ExperienceSection() {
           <div className="flex flex-col space-y-2">
             <div className="flex items-center gap-x-2">
               <h3 className="text-xl font-bold">Financial Planning Analyst</h3>
-              <div className="ml-auto text-sm text-muted-foreground">Jun 2023 - Nov 2024</div>
+              <div className="ml-auto text-sm text-muted-foreground">2023</div>
             </div>
             <p className="text-base font-medium">DGas - Dharma Capital - Monterrey, NL, México</p>
             <ul className="list-disc list-outside ml-5 text-muted-foreground">

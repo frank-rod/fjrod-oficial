@@ -44,10 +44,10 @@ export function AboutSection() {
             Sobre mí
           </h2>
           <p className="text-xl mb-4 font-medium">
-            Financial & Data Specialist | Expertise en análisis y optimización de negocios
+            Data Specialist | Expertise en análisis y optimización de negocios
           </p>
           <p className="text-muted-foreground mb-6">
-            Profesional con experiencia en Python, SQL, Excel y herramientas de IA. Destacado por aprendizaje rápido, pensamiento analítico y capacidad de adaptación en entornos dinámicos. Apasionado por convertir datos en valor, impulsando crecimiento y eficiencia empresarial a través del análisis numérico y la automatización.
+            Apasionado por el análisis de datos y la automatización, vengo de un background en finanzas que me enseñó a tomar decisiones con base en números. Hoy aplico ese mismo enfoque en el mundo del análisis de datos, trabajando con Python, SQL y Excel. Todos los días dedico al menos un par de horas a aprender herramientas de inteligencia artificial, convencido de que la curiosidad constante es clave para crecer en este campo.
           </p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             <Button variant="outline" size="sm" asChild>

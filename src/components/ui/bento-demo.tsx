@@ -4,9 +4,11 @@ import {
   LineChartIcon,
   BarChartIcon,
   BriefcaseIcon,
+  ShipIcon,
 } from "lucide-react";
 
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import { REMOTE_IMAGES } from "@/lib/remote-images";
 
 const projects = [
   {
@@ -38,18 +40,19 @@ const projects = [
     className: "lg:col-span-1",
   },
   {
-    Icon: DatabaseIcon,
-    name: "Optimizador de Inventario",
-    description: "Herramienta para optimizar niveles de inventario basada en patrones de demanda y costos de almacenamiento.",
-    href: "#",
-    cta: "Ver detalles",
+    Icon: null,
+    name: "Historias entre números: el Titanic",
+    description: "Más que predecir, el objetivo es aprender de los datos detrás de una de las tragedias más recordadas de la historia.",
+    href: "https://github.com/frank-rod/analisis_titanic/blob/main/analisis_titanic.ipynb",
+    cta: "Ver análisis",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -right-10 -bottom-10 h-64 w-64 rounded-full bg-gradient-to-tl from-primary/30 to-amber-500/20 blur-3xl opacity-70"></div>
-        <div className="absolute right-20 top-10 h-20 w-20 rounded-full bg-gradient-to-br from-yellow-500/20 to-primary/20 blur-xl opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
       </div>
     ),
-    className: "lg:col-span-1",
+    className: "lg:col-span-1 !bg-transparent !shadow-none dark:!bg-transparent dark:!border-none",
   },
   {
     Icon: Code2Icon,

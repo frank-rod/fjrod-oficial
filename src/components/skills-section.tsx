@@ -26,7 +26,7 @@ export function SkillsSection() {
             <h3 className="font-bold text-lg">Python</h3>
           </div>
           <p className="text-muted-foreground">
-            Librerías NumPy, Pandas, Matplotlib y TensorFlow para análisis y visualización de datos.
+            Librerías NumPy, Pandas, Matplotlib, TensorFlow y Scikit-learn para análisis y visualización de datos.
           </p>
         </div>
         
@@ -66,7 +66,7 @@ export function SkillsSection() {
             <h3 className="font-bold text-lg">Inteligencia Artificial</h3>
           </div>
           <p className="text-muted-foreground">
-            Uso y comprensión de herramientas de inteligencia artificial (ChatGPT, Google Bard, Microsoft Copilot) para análisis de datos.
+            Uso y comprensión de herramientas de inteligencia artificial (ChatGPT, Gemini, Microsoft Copilot, Cursor, n8n) para análisis de datos.
           </p>
         </div>
       </div>

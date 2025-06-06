@@ -19,9 +19,20 @@ export function EducationSection() {
         </div>
         
         <div className="bg-background rounded-2xl p-6 shadow-sm border border-border">
+          <h3 className="text-xl font-bold">Instituto de Estudios Bursátiles de Madrid</h3>
+          <p className="text-sm text-muted-foreground">2022</p>
+          <p className="mt-2">Semestre de intercambio en España para la concentración de Fintech y Data Science</p>
+          <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground">
+            <li>Bases de Python</li>
+            <li>Análisis de datos</li>
+            <li>Ciencias de datos</li>
+            <li>Análisis estadísticos</li>
+          </ul>
+        </div>
+        
+        <div className="bg-background rounded-2xl p-6 shadow-sm border border-border">
           <h3 className="text-xl font-bold">Certificados y Diplomas</h3>
           <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground">
-            <li><span className="font-medium">Fintech & Data Science</span> - Instituto de Estudios Bursátiles de Madrid, España - Estudiante de Intercambio</li>
             <li><span className="font-medium">Python y Estadística para Análisis Financiero</span> - Universidad de Ciencia y Tecnología de Hong Kong</li>
             <li><span className="font-medium">Estadística de Negocios y Análisis</span> - Universidad Rice</li>
             <li><span className="font-medium">Business Intelligence Data Analyst</span> - Codecademy</li>

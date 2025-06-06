@@ -38,7 +38,7 @@ export function HeroSection() {
           Francisco J. Rodriguez
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-xl">
-          De las finanzas a los datos: Analista de Datos Senior en transición a Software Engineer.
+          Transformé modelos financieros en modelos de datos. Hoy, convierto números en decisiones.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-6">
           <a href="#projects" onClick={(e) => scrollToElement('projects', e)} className="no-underline">
