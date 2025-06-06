@@ -12,29 +12,37 @@ import { REMOTE_IMAGES } from "@/lib/remote-images";
 
 const projects = [
   {
-    Icon: LineChartIcon,
-    name: "Análisis Financiero Automatizado",
-    description: "Dashboard para análisis financiero en tiempo real utilizando PowerBI y Python para automatizar la extracción y limpieza de datos.",
-    href: "#",
-    cta: "Ver detalles",
+    Icon: null,
+    name: "Ciencia de Datos para Retail",
+    description: "Proyecto completo con 4 modelos de ML aplicados a datos reales de retail: clustering, sistemas de recomendación, forecasting y detección de anomalías con Python.",
+    href: "https://github.com/frank-rod/retail-analysis-ML-/blob/main/retail_analysis_portfolio.ipynb",
+    cta: "Ver análisis",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-gradient-to-br from-primary/30 to-purple-500/20 blur-3xl opacity-70"></div>
-        <div className="absolute right-0 bottom-0 h-32 w-32 rounded-full bg-gradient-to-tr from-blue-500/20 to-primary/20 blur-2xl opacity-60"></div>
+        <img 
+          src={REMOTE_IMAGES.retail} 
+          alt="Retail analysis background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/80"></div>
       </div>
     ),
     className: "lg:col-span-1",
   },
   {
-    Icon: BarChartIcon,
-    name: "Sistema de Pronósticos de Ventas",
-    description: "Implementación de un modelo de machine learning para predecir ventas futuras basado en datos históricos y variables de mercado.",
-    href: "#",
-    cta: "Ver detalles",
+    Icon: null,
+    name: "Análisis Técnico - Google Stock",
+    description: "Análisis cuantitativo completo de 5 años de datos históricos de Google (GOOGL) con indicadores técnicos, estrategias de trading algorítmico, análisis de riesgo y modelos predictivos usando LSTM.",
+    href: "https://github.com/frank-rod/GoogleStock/blob/main/google_stock_analysis.ipynb",
+    cta: "Ver análisis",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-10 -bottom-10 h-64 w-64 rounded-full bg-gradient-to-tr from-secondary/30 to-green-500/20 blur-3xl opacity-70"></div>
-        <div className="absolute left-10 top-10 h-32 w-32 rounded-full bg-gradient-to-bl from-blue-500/20 to-secondary/20 blur-2xl opacity-60"></div>
+        <img 
+          src={REMOTE_IMAGES.googleStock} 
+          alt="Google stock analysis background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75"></div>
       </div>
     ),
     className: "lg:col-span-1",
@@ -59,10 +67,10 @@ const projects = [
   },
   {
     Icon: Code2Icon,
-    name: "Aplicación Web de Gestión Financiera",
-    description: "Desarrollo de una aplicación web para el control y seguimiento de finanzas personales y empresariales.",
+    name: "Próximamente...",
+    description: "Actualmente aprendiendo sobre IA generativa y sus aplicaciones en análisis de datos, automatización de procesos y desarrollo de soluciones inteligentes.",
     href: "#",
-    cta: "Ver detalles",
+    cta: "En desarrollo",
     background: (
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-10 -top-10 h-64 w-64 rounded-full bg-gradient-to-br from-secondary/30 to-cyan-500/20 blur-3xl opacity-70"></div>
@@ -73,10 +81,10 @@ const projects = [
   },
   {
     Icon: BriefcaseIcon,
-    name: "Plataforma de Administración de Inversiones",
-    description: "Sistema para gestionar carteras de inversión, analizar rendimientos y optimizar estrategias de inversión basadas en perfiles de riesgo.",
+    name: "En Desarrollo...",
+    description: "Explorando la creación de agentes de IA para automatización y análisis de datos, con enfoque en optimización de procesos empresariales y toma de decisiones inteligentes.",
     href: "#",
-    cta: "Ver detalles",
+    cta: "En desarrollo",
     background: (
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -right-10 -bottom-10 h-64 w-64 rounded-full bg-gradient-to-tl from-secondary/30 to-indigo-500/20 blur-3xl opacity-70"></div>

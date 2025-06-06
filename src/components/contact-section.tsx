@@ -21,7 +21,7 @@ export function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center">
               <Mail className="h-5 w-5 mr-3 text-primary" />
-              <a href="mailto:tu@email.com" className="hover:underline">tu@email.com</a>
+              <a href="mailto:fjrodriguez00@outlook.com" className="hover:underline">fjrodriguez00@outlook.com</a>
             </div>
             <div className="flex items-center">
               <Linkedin className="h-5 w-5 mr-3 text-primary" />
@@ -60,7 +60,7 @@ export function ContactSection() {
                 id="email"
                 type="email"
                 className="w-full rounded-md border border-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                placeholder="tu@email.com"
+                placeholder="fjrodriguez00@outlook.com"
                 required
               />
             </div>

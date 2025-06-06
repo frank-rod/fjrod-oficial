@@ -25,7 +25,7 @@ export function Footer() {
           </a>
           <span className="text-muted-foreground">•</span>
           <a 
-            href="mailto:tu@email.com" 
+            href="mailto:fjrodriguez00@outlook.com" 
             className="text-muted-foreground text-sm hover:text-primary transition-colors"
           >
             Email
