@@ -27,13 +27,11 @@ export function AboutSection() {
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
         <div className="md:col-span-2 flex justify-center md:justify-start">
           {mounted && (
-            <div className="relative w-52 h-52 rounded-full overflow-hidden border-4 border-primary shadow-lg mx-auto md:mx-0 p-2 bg-background">
-              <ThemeImage
-                darkSrc={REMOTE_IMAGES.profileDark}
-                lightSrc={REMOTE_IMAGES.profileLight}
+            <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-primary shadow-lg mx-auto md:mx-0 p-2 bg-background">
+              <img
+                src={REMOTE_IMAGES.yomero}
                 alt="Francisco J. Rodriguez"
                 className="w-full h-full object-cover rounded-full"
-                priority
               />
             </div>
           )}

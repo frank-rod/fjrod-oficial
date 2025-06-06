@@ -47,9 +47,12 @@ const projects = [
     cta: "Ver análisis",
     background: (
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"></div>
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+        <img 
+          src={REMOTE_IMAGES.titanic} 
+          alt="Titanic background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75"></div>
       </div>
     ),
     className: "lg:col-span-1 !bg-transparent !shadow-none dark:!bg-transparent dark:!border-none",
