@@ -1,36 +1,30 @@
 "use client"
 
 import { Particles } from "@/components/ui/particles"
-import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
 import { InteractiveHoverButton } from "./ui/interactive-hover-button"
 import { scrollToElement } from "@/lib/smooth-scroll"
-import { ThemeImage } from "@/components/theme-image"
 import { REMOTE_IMAGES } from "@/lib/remote-images"
 
 export function HeroSection() {
-  const { resolvedTheme } = useTheme()
-  const [color, setColor] = useState("#ffffff")
+  const [color] = useState("#ffffff")
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000")
     setMounted(true)
-  }, [resolvedTheme])
+  }, [])
 
   return (
     <section className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
       <div className="z-10 flex flex-col items-center justify-center px-6 text-center">
         {mounted && (
           <div className="relative h-48 w-48 mb-10 rounded-full overflow-hidden border-4 border-primary shadow-lg mx-auto p-1 bg-background">
-            <ThemeImage
-              darkSrc={REMOTE_IMAGES.profileDark}
-              lightSrc={REMOTE_IMAGES.profileLight}
+            <img
+              src={REMOTE_IMAGES.profileDark}
               alt="Francisco J. Rodriguez"
               className="w-full h-full object-cover rounded-full"
-              priority
             />
           </div>
         )}

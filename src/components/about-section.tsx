@@ -2,9 +2,7 @@
 
 import { Button } from "./ui/button"
 import { Download, Github, Linkedin, Mail } from "lucide-react"
-import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
-import { ThemeImage } from "@/components/theme-image"
 import { REMOTE_IMAGES } from "@/lib/remote-images"
 
 // Enlaces sociales

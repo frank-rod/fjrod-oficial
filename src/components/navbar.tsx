@@ -3,9 +3,6 @@
 import { useState, useEffect } from "react"
 import { BookOpen, FileText, Briefcase, Phone, User, GraduationCap, Lightbulb } from "lucide-react"
 import { NavBar } from "@/components/ui/tubelight-navbar"
-import { useTheme } from "next-themes"
-import { ThemeToggle } from "@/components/ui/theme-toggle"
-import { ThemeImage } from "@/components/theme-image"
 import { REMOTE_IMAGES } from "@/lib/remote-images"
 
 export function Navbar() {
@@ -30,21 +27,18 @@ export function Navbar() {
         <a href="#" className="flex-shrink-0" aria-label="Inicio">
           {mounted && (
             <div className="relative w-36 h-12 flex items-center transition-transform hover:scale-105">
-              <ThemeImage
-                darkSrc={REMOTE_IMAGES.logoDark}
-                lightSrc={REMOTE_IMAGES.logoLight}
+              <img
+                src={REMOTE_IMAGES.logoDark}
                 alt="Logo de Francisco J. Rodriguez"
                 width={144}
                 height={48}
                 className="object-contain"
-                priority
               />
             </div>
           )}
         </a>
         
         <div className="flex items-center gap-6 ml-auto pr-0 md:pr-10 lg:pr-20">
-          <ThemeToggle />
           <NavBar items={navItems} />
         </div>
       </div>
