@@ -7,7 +7,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-16 px-6 md:px-10 max-w-6xl mx-auto bg-muted/50">
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8">
-        Proyectos
+        Proyectos: Datos y Machine Learning
       </h2>
       
       <BentoDemo />
