@@ -27,7 +27,7 @@ export function AboutSection() {
           {mounted && (
             <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-primary shadow-lg mx-auto md:mx-0 p-2 bg-background">
               <img
-                src={REMOTE_IMAGES.yomero}
+                src={REMOTE_IMAGES.profileNew}
                 alt="Francisco J. Rodriguez"
                 className="w-full h-full object-cover rounded-full"
               />
