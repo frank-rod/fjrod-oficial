@@ -43,7 +43,7 @@ export function AboutSection() {
             Data Specialist | Expertise en análisis y optimización de negocios
           </p>
           <p className="text-muted-foreground mb-6">
-            Apasionado por el análisis de datos y la automatización, vengo de un background en finanzas que me enseñó a tomar decisiones con base en números. Hoy aplico ese mismo enfoque en el mundo del análisis de datos, trabajando con Python, SQL y Excel. Todos los días dedico al menos un par de horas a aprender herramientas de inteligencia artificial, convencido de que la curiosidad constante es clave para crecer en este campo.
+            Me gusta crear cosas y resolver problemas técnicos. Antes de construir, busco entender los fundamentos. Vengo de finanzas: aprendí a tomar decisiones con números y hoy aplico ese mismo enfoque al análisis de datos y a construir productos. Todos los días dedico un par de horas a explorar y usar herramientas de IA. Como no hay manual, la curiosidad es la ventaja real.
           </p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             <Button variant="outline" size="sm" asChild>

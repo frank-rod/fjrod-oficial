@@ -52,7 +52,7 @@ export function HeroSection() {
       <Particles
         className="absolute inset-0"
         quantity={100}
-        ease={80}
+        ease={68}
         color={color}
         refresh
       />
