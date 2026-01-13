@@ -10,7 +10,7 @@ const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/fjrodriguez00/',
   github: 'https://github.com/frank-rod',
   email: 'fjrodriguez00@outlook.com',
-  cv: 'https://drive.google.com/file/d/15Z_glxVG2yS3JookwmunurwfFAHxwOxY/view?usp=sharing'
+  cv: 'https://drive.google.com/file/d/1ENpzT1lfdtcDLGARY-jx-P30GrDB2zoi/view?usp=sharing'
 }
 
 export function AboutSection() {

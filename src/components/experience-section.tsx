@@ -23,9 +23,9 @@ const experiences = [
     location: "Monterrey, NL, México",
     period: "Septiembre 2024 - Agosto 2025",
     logo: "/experience/manuable-logo.png",
-    photo: "/experience/manuable-yo.jpg",
+    photo: "/experience/manuable-yo.png",
     responsibilities: [
-      "A cargo del dpto. de Business Intelligence (6 integrantes)",
+      "A cargo del dpto. de Business Intelligence",
       "Reducción de los tiempos de carga de bases de datos en un 98.2%",
       "Implementación de Data Warehouse",
       "Diseño de procesos ETL",
