@@ -1,43 +1,55 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 
 export function CustomCursor() {
-  const [mounted, setMounted] = useState(false)
-  const [isHovering, setIsHovering] = useState(false)
   const cursorRef = useRef<HTMLDivElement>(null)
+  const isHoveringRef = useRef(false)
 
   useEffect(() => {
-    setMounted(true)
+    const cursor = cursorRef.current
+    if (!cursor) return
+
+    let rafId: number | null = null
+    let targetX = -100
+    let targetY = -100
 
     const updatePosition = (e: MouseEvent) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX}px`
-        cursorRef.current.style.top = `${e.clientY}px`
-      }
+      targetX = e.clientX
+      targetY = e.clientY
 
       const target = e.target as HTMLElement
-      const isClickable =
+      const isClickable = !!(
         target.closest("a") ||
         target.closest("button") ||
         target.closest("[role='button']") ||
         target.closest("input") ||
         target.closest("textarea") ||
-        target.closest("select") ||
-        target.closest("[onclick]") ||
-        window.getComputedStyle(target).cursor === "pointer"
+        target.closest("select")
+      )
 
-      setIsHovering(!!isClickable)
+      if (isClickable !== isHoveringRef.current) {
+        isHoveringRef.current = isClickable
+        const size = isClickable ? "28px" : "14px"
+        cursor.style.width = size
+        cursor.style.height = size
+      }
     }
 
-    window.addEventListener("mousemove", updatePosition)
+    const animate = () => {
+      cursor.style.left = `${targetX}px`
+      cursor.style.top = `${targetY}px`
+      rafId = requestAnimationFrame(animate)
+    }
+
+    rafId = requestAnimationFrame(animate)
+    window.addEventListener("mousemove", updatePosition, { passive: true })
 
     return () => {
       window.removeEventListener("mousemove", updatePosition)
+      if (rafId) cancelAnimationFrame(rafId)
     }
   }, [])
-
-  if (!mounted) return null
 
   return (
     <div
@@ -45,10 +57,11 @@ export function CustomCursor() {
       className="pointer-events-none fixed z-[9999] rounded-full bg-white mix-blend-difference transition-[width,height] duration-150 ease-out"
       style={{
         transform: "translate(-50%, -50%)",
-        width: isHovering ? 28 : 14,
-        height: isHovering ? 28 : 14,
+        width: 14,
+        height: 14,
         left: -100,
         top: -100,
+        willChange: "left, top, width, height",
       }}
     />
   )
