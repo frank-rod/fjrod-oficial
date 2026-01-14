@@ -8,38 +8,38 @@ export function EducationSection() {
       </h2>
       
       <div className="space-y-10">
-        <div className="bg-background rounded-2xl p-6 shadow-sm border border-border flex gap-6">
-          <div className="flex-shrink-0">
+        <div className="bg-background rounded-2xl p-6 shadow-sm border border-border flex flex-col md:flex-row gap-6">
+          <div className="flex-shrink-0 mx-auto md:mx-0">
             <img
               src="/experience/tec-yo.jpg"
               alt="Francisco en el Tec de Monterrey"
               className="w-32 h-32 object-cover rounded-2xl"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 text-center md:text-left">
             <h3 className="text-xl font-bold">Tecnológico de Monterrey, Campus Monterrey</h3>
             <p className="text-sm text-muted-foreground">2018 - 2022</p>
             <p className="mt-2">Licenciatura en Finanzas | Especialización en Fintech & Data Science</p>
-            <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground">
+            <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground text-left">
               <li>Coordinador en la Sociedad de Alumnos de Administración Financiera (SALAF).</li>
               <li>Servicio social en 'DCA Mexico - Ciudadanitos' como profesor y creador de contenido.</li>
             </ul>
           </div>
         </div>
-        
-        <div className="bg-background rounded-2xl p-6 shadow-sm border border-border flex gap-6">
-          <div className="flex-shrink-0">
+
+        <div className="bg-background rounded-2xl p-6 shadow-sm border border-border flex flex-col md:flex-row gap-6">
+          <div className="flex-shrink-0 mx-auto md:mx-0">
             <img
               src="/experience/ieb-yo.jpg"
               alt="Francisco en el IEB Madrid"
               className="w-32 h-32 object-cover rounded-2xl"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 text-center md:text-left">
             <h3 className="text-xl font-bold">Instituto de Estudios Bursátiles de Madrid</h3>
             <p className="text-sm text-muted-foreground">2022</p>
             <p className="mt-2">Semestre de intercambio en España para la concentración de Fintech y Data Science</p>
-            <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground">
+            <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground text-left">
               <li>Fundamentos de la ciencia de datos aplicada a finanzas corporativas y bursátiles.</li>
               <li>Metodologías estadísticas para la toma de decisiones.</li>
             </ul>

@@ -62,8 +62,8 @@ export function ExperienceSection() {
 
       <div className="space-y-12">
         {experiences.map((exp, index) => (
-          <div key={index} className="flex gap-6">
-            <div className="flex-shrink-0 w-60 h-56 bg-white rounded-2xl overflow-hidden shadow-md flex flex-col">
+          <div key={index} className="flex flex-col md:flex-row gap-6">
+            <div className="flex-shrink-0 w-full md:w-60 h-56 bg-white rounded-2xl overflow-hidden shadow-md flex flex-col mx-auto md:mx-0 max-w-60">
               <div className="h-14 flex items-center justify-center p-2 bg-white">
                 <img
                   src={exp.logo}
@@ -80,13 +80,13 @@ export function ExperienceSection() {
               </div>
             </div>
 
-            <div className="flex flex-col space-y-2 flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-center gap-x-2">
+            <div className="flex flex-col space-y-2 flex-1 text-center md:text-left">
+              <div className="flex flex-col md:flex-row md:items-center gap-x-2">
                 <h3 className="text-xl font-bold">{exp.title}</h3>
-                <div className="sm:ml-auto text-sm text-muted-foreground">{exp.period}</div>
+                <div className="md:ml-auto text-sm text-muted-foreground">{exp.period}</div>
               </div>
               <p className="text-base font-medium">{exp.company} - {exp.location}</p>
-              <ul className="list-disc list-outside ml-5 text-muted-foreground">
+              <ul className="list-disc list-outside ml-5 text-muted-foreground text-left">
                 {exp.responsibilities.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
