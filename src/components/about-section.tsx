@@ -4,8 +4,9 @@ import { Button } from "./ui/button"
 import { Download, Github, Linkedin, Mail } from "lucide-react"
 import { useState, useEffect } from "react"
 import { REMOTE_IMAGES } from "@/lib/remote-images"
+import { useLanguage } from "@/lib/language-context"
+import { translations, t } from "@/lib/translations"
 
-// Enlaces sociales
 const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/fjrodriguez00/',
   github: 'https://github.com/frank-rod',
@@ -15,6 +16,7 @@ const SOCIAL_LINKS = {
 
 export function AboutSection() {
   const [mounted, setMounted] = useState(false)
+  const { locale } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -34,16 +36,16 @@ export function AboutSection() {
             </div>
           )}
         </div>
-        
+
         <div className="md:col-span-3 text-center md:text-left">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Sobre mí
+            {t(translations.about.title, locale)}
           </h2>
           <p className="text-xl mb-4 font-medium">
-            Data Specialist | Expertise en análisis y optimización de negocios
+            {t(translations.about.subtitle, locale)}
           </p>
           <p className="text-muted-foreground mb-6">
-            Me gusta crear cosas y resolver problemas técnicos. Antes de construir, busco entender los fundamentos. Vengo de finanzas: aprendí a tomar decisiones con números y hoy aplico ese mismo enfoque al análisis de datos y a construir productos. Todos los días dedico un par de horas a explorar y usar herramientas de IA. Como no hay manual, la curiosidad es la ventaja real.
+            {t(translations.about.description, locale)}
           </p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             <Button variant="outline" size="sm" asChild>
@@ -61,13 +63,13 @@ export function AboutSection() {
             <Button variant="outline" size="sm" asChild>
               <a href={`mailto:${SOCIAL_LINKS.email}`}>
                 <Mail className="mr-2 h-4 w-4" />
-                Contacto
+                {t(translations.about.contact, locale)}
               </a>
             </Button>
             <Button variant="default" size="sm" asChild>
               <a href={SOCIAL_LINKS.cv} target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
-                Descargar CV
+                {t(translations.about.downloadCV, locale)}
               </a>
             </Button>
           </div>

@@ -1,12 +1,18 @@
 "use client"
 
+import { useLanguage } from "@/lib/language-context"
+import { translations, t } from "@/lib/translations"
+
 export function EducationSection() {
+  const { locale } = useLanguage()
+  const certs = translations.education.certs.items[locale]
+
   return (
     <section id="education" className="py-16 px-6 md:px-10 max-w-6xl mx-auto bg-muted/50">
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8">
-        Educación
+        {t(translations.education.title, locale)}
       </h2>
-      
+
       <div className="space-y-10">
         <div className="bg-background rounded-2xl p-6 shadow-sm border border-border flex flex-col md:flex-row gap-6">
           <div className="flex-shrink-0 mx-auto md:mx-0">
@@ -17,12 +23,13 @@ export function EducationSection() {
             />
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h3 className="text-xl font-bold">Tecnológico de Monterrey, Campus Monterrey</h3>
+            <h3 className="text-xl font-bold">{t(translations.education.tec.name, locale)}</h3>
             <p className="text-sm text-muted-foreground">2018 - 2022</p>
-            <p className="mt-2">Licenciatura en Finanzas | Especialización en Fintech & Data Science</p>
+            <p className="mt-2">{t(translations.education.tec.degree, locale)}</p>
             <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground text-left">
-              <li>Coordinador en la Sociedad de Alumnos de Administración Financiera (SALAF).</li>
-              <li>Servicio social en 'DCA Mexico - Ciudadanitos' como profesor y creador de contenido.</li>
+              {translations.education.tec.items[locale].map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -36,25 +43,26 @@ export function EducationSection() {
             />
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h3 className="text-xl font-bold">Instituto de Estudios Bursátiles de Madrid</h3>
+            <h3 className="text-xl font-bold">{t(translations.education.ieb.name, locale)}</h3>
             <p className="text-sm text-muted-foreground">2022</p>
-            <p className="mt-2">Semestre de intercambio en España para la concentración de Fintech y Data Science</p>
+            <p className="mt-2">{t(translations.education.ieb.degree, locale)}</p>
             <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground text-left">
-              <li>Fundamentos de la ciencia de datos aplicada a finanzas corporativas y bursátiles.</li>
-              <li>Metodologías estadísticas para la toma de decisiones.</li>
+              {translations.education.ieb.items[locale].map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
-        
+
         <div className="bg-background rounded-2xl p-6 shadow-sm border border-border">
-          <h3 className="text-xl font-bold">Certificados y Diplomas</h3>
+          <h3 className="text-xl font-bold">{t(translations.education.certs.title, locale)}</h3>
           <ul className="list-disc list-outside ml-5 mt-2 text-muted-foreground">
-            <li><span className="font-medium">Analítica de Datos Avanzada</span> - Google</li>
-            <li><span className="font-medium">Estadística de Negocios y Análisis</span> - Universidad Rice</li>
-            <li><span className="font-medium">Business Intelligence Data Analyst</span> - Codecademy</li>
+            {certs.map((cert, i) => (
+              <li key={i}><span className="font-medium">{cert.name}</span> - {cert.org}</li>
+            ))}
           </ul>
         </div>
       </div>
     </section>
   )
-} 
+}

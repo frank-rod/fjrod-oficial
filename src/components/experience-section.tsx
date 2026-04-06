@@ -1,63 +1,43 @@
 "use client"
 
-const experiences = [
+import { useLanguage } from "@/lib/language-context"
+import { translations, t } from "@/lib/translations"
+
+const experiencesBase = [
   {
-    title: "Analista de Datos Senior",
     company: "GP Vivienda",
     location: "Monterrey, NL, México",
-    period: "Agosto 2025 - Presente",
     logo: "/experience/gpvivienda-logo.png",
     photo: "/experience/gpvivienda-yo.png",
-    responsibilities: [
-      "Automatización de reportes financieros",
-      "Creación de tableros estratégicos para dirección (Power BI)",
-      "Análisis de datos en Python, Excel y SQL Server",
-      "Cuadre de información directamente en la base de datos, eliminando exceles pesados",
-      "Generación de insights y proyecciones",
-      "Optimización de modelos financieros",
-    ],
   },
   {
-    title: "Gerente de Business Intelligence",
     company: "Manuable",
     location: "Monterrey, NL, México",
-    period: "Septiembre 2024 - Agosto 2025",
     logo: "/experience/manuable-logo.png",
     photo: "/experience/manuable-yo.png",
-    responsibilities: [
-      "A cargo del dpto. de Business Intelligence",
-      "Reducción de los tiempos de carga de bases de datos en un 98.2%",
-      "Implementación de Data Warehouse",
-      "Diseño de procesos ETL",
-      "Análisis del comportamiento de la empresa y productos",
-      "Segmentaciones de clientes",
-      "Insights que incrementaron ingresos en 10%",
-    ],
   },
   {
-    title: "Especialista de Business Intelligence",
     company: "DGas - Dharma Capital",
     location: "Monterrey, NL, México",
-    period: "Junio 2023 - Septiembre 2024",
     logo: "/experience/dgas-logo.png",
     photo: "/experience/dgas-yo.jpg",
-    responsibilities: [
-      "Proyecciones Financieras",
-      "Análisis de comportamiento de clientes",
-      "Recolección y limpieza de datos",
-      "Creación de reportes y métricas clave (KPIs)",
-      "Automatización de procesos",
-      "Creación de dashboards en PowerBI",
-      "Presentaciones a inversionistas y directores",
-    ],
   },
 ]
 
 export function ExperienceSection() {
+  const { locale } = useLanguage()
+
+  const experiences = experiencesBase.map((base, i) => ({
+    ...base,
+    title: t(translations.experience.jobs[i].title, locale),
+    period: t(translations.experience.jobs[i].period, locale),
+    responsibilities: translations.experience.jobs[i].responsibilities[locale],
+  }))
+
   return (
     <section id="experience" className="py-16 px-6 md:px-10 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8">
-        Experiencia Profesional
+        {t(translations.experience.title, locale)}
       </h2>
 
       <div className="space-y-12">

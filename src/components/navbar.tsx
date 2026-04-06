@@ -4,21 +4,24 @@ import { useState, useEffect } from "react"
 import { BookOpen, FileText, Briefcase, Phone, User, GraduationCap, Lightbulb } from "lucide-react"
 import { NavBar } from "@/components/ui/tubelight-navbar"
 import { REMOTE_IMAGES } from "@/lib/remote-images"
+import { useLanguage } from "@/lib/language-context"
+import { translations, t } from "@/lib/translations"
 
 export function Navbar() {
   const [mounted, setMounted] = useState(false)
+  const { locale } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   const navItems = [
-    { name: 'Sobre mí', url: '#about', icon: User },
-    { name: 'Proyectos', url: '#projects', icon: FileText },
-    { name: 'Habilidades', url: '#skills', icon: Lightbulb },
-    { name: 'Experiencia', url: '#experience', icon: Briefcase },
-    { name: 'Educación', url: '#education', icon: GraduationCap },
-    { name: 'Contacto', url: '#contact', icon: Phone }
+    { name: t(translations.nav.about, locale), url: '#about', icon: User },
+    { name: t(translations.nav.projects, locale), url: '#projects', icon: FileText },
+    { name: t(translations.nav.skills, locale), url: '#skills', icon: Lightbulb },
+    { name: t(translations.nav.experience, locale), url: '#experience', icon: Briefcase },
+    { name: t(translations.nav.education, locale), url: '#education', icon: GraduationCap },
+    { name: t(translations.nav.contact, locale), url: '#contact', icon: Phone }
   ]
 
   return (
@@ -37,7 +40,7 @@ export function Navbar() {
             </div>
           )}
         </a>
-        
+
         <div className="flex items-center gap-6 ml-auto pr-0 md:pr-10 lg:pr-20">
           <NavBar items={navItems} />
         </div>

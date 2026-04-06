@@ -4,6 +4,8 @@ import "./globals.css";
 import { PreloadImages } from "@/components/preload-images";
 import { Analytics } from "@vercel/analytics/next";
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { LanguageProvider } from "@/lib/language-context";
+import { LanguageToggle } from "@/components/language-toggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +32,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        <PreloadImages />
-        <CustomCursor />
-        {children}
-        <Analytics />
+        <LanguageProvider>
+          <PreloadImages />
+          <CustomCursor />
+          <LanguageToggle />
+          {children}
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );
